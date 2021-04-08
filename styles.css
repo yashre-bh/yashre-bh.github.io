@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+html{
+    scroll-behavior:smooth;
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeUp{
+    0% {margin-top: 25%; opacity: 0;}
+    100% {margin-top: 20%; opacity: 1;}
+}
+
+@keyframes bg-color {
+    0% {background-color: rgb(0, 64, 69);;}
+    33% {background-color:rgb(118, 0, 73)}
+    66% {background-color: rgb(0, 96, 0) ;}
+    100% {background-color: rgb(0, 64, 69);}
+}
+
+@keyframes lighting{
+    0% {
+        box-shadow: 2px 2px 6px black;
+    }
+    50% {
+        box-shadow: -2px -2px 6px black;
+    }
+    100% {
+        box-shadow: 2px 2px 6px black;
+    }
+}
+
+@keyframes textLighting{
+    0% {color: rgb(0, 64, 69);}
+    33% {color:rgb(118, 0, 73);}
+    66% {color: rgb(0, 96, 0) ;}
+    100% {color: rgb(0, 64, 69);}
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background:rgb(0, 0, 0);
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: url(./images/bg.png);
+    background-size: cover;
+    z-index: 1;
+}    
+
+.header-container{
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-title a{
+    font-family: 'Yeseva One', cursive;
+    color: #ffffff;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.nav-title:hover{
+    letter-spacing: 0.3em;
+}
+
+nav{
+    top: 0;
+    overflow: hidden;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #000000;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    padding: 0px 5%;
+    position: fixed;
+    z-index: 5;
+    animation: fadeIn 1s 0.3s ease both;
+}
+
+nav ul{
+    display: flex;
+    list-style:none;
+}
+
+nav ul li a{
+    margin: 1rem;
+    color:rgb(142, 142, 142);
+    font-family: 'Yeseva One', cursive;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.header-name, .header-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Yeseva One', cursive;
+    color:#ffffff ;
+    font-size: 13vh;
+    flex: 1;
+    animation: fadeUp 1s 0.3s ease both;
+    
+}
+
+.header-desc{
+    font-size: 5vh;
+    animation: fadeIn 4s 0.3s ease both;
+    color: #dfdfdf;
+}
+
+.me-container{
+    display: flex;
+    margin-top: 0px;
+    width: 100%;
+    box-shadow: 0 -6px 8px -4px rgba(0, 0, 0, 0.3), 0 -6px 20px -4px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    z-index: 10;
+    animation: bg-color 15s infinite ease both;
+}
+
+.me-tab{
+    display: flex;
+    width: 70%;
+    height: 70%;
+    min-height: 200px;
+    margin: auto;
+    animation: lighting 4s infinite ease both;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.me-image{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(8, 39, 218);
+    border-radius: 10px;
+}
+
+.me-image-box{
+    display: flex;
+    width: 80%;
+    height: 100%;
+}
+
+.me-image-container{
+    padding: 10px 10px 10px 10px;
+    width: 80%;
+    display: flex;
+}
+
+.me-title-text-container{
+    padding: 25px;
+}
+
+.me-title{
+    display: flex;
+    height: 10%;
+    font-family: 'Yeseva One', cursive;
+    font-size: 7vh;
+    animation: textLighting 6s 0.5s infinite ease both ;
+}
+
+.me-text p{
+    display: block;
+    line-height: 1.5em;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.2em;
+    color: rgb(44, 168, 206);
+}
+
+footer{
+    min-height: 500px;
+    width: 100%;
+    
+    background-color: black;
+    justify-content: center;
+}
+
+.footer-title{
+    padding-top: 40px;
+    padding-left: 40px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 7vh;
+    color:#ffffff
+}
+
+.footer-text{
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1.5em;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.2em;
+    color: white;
+    font-weight:lighter;
+
+}
+
+.social-media > div{
+    margin-top: 5%;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.2em;
+    color: white;
+
+} 
+.insta a, .fb a, .gh a, .linkedin a{
+    text-decoration: none;
+    color: white;
+}
+
+.insta a:hover, .fb a:hover, .gh a:hover, .linkedin a:hover{
+   color:grey;
+
+}
+
+.social-media  {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
