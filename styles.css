@@ -14,30 +14,36 @@ html{
     100% {margin-top: 20%; opacity: 1;}
 }
 
-@keyframes bg-color {
-    0% {background-color: rgb(0, 64, 69);;}
-    33% {background-color:rgb(118, 0, 73)}
-    66% {background-color: rgb(0, 96, 0) ;}
-    100% {background-color: rgb(0, 64, 69);}
-}
 
-@keyframes lighting{
+@keyframes tab-color{
+
     0% {
         box-shadow: 2px 2px 6px black;
+        background-color: rgb(143, 56, 124);
     }
     50% {
         box-shadow: -2px -2px 6px black;
+        background-color: rgb(57, 99, 175);
     }
     100% {
         box-shadow: 2px 2px 6px black;
+        background-color: rgb(143, 56, 124);
     }
+
 }
 
-@keyframes textLighting{
-    0% {color: rgb(0, 64, 69);}
-    33% {color:rgb(118, 0, 73);}
-    66% {color: rgb(0, 96, 0) ;}
-    100% {color: rgb(0, 64, 69);}
+@keyframes lighting{
+    0% {color: rgb(169, 236, 189);}
+    33% {color:rgb(250, 170, 219);}
+    66% {color: rgb(127, 196, 236) ;}
+    100% {color: rgb(244, 250, 156);}
+}
+
+@keyframes bg-color{
+    0% {background-color: rgb(169, 236, 189);}
+    33% {background-color:rgb(250, 170, 219);}
+    66% {background-color: rgb(127, 196, 236) ;}
+    100% {background-color: rgb(169, 236, 189);}
 }
 
 body{
@@ -49,9 +55,10 @@ body{
 header{
     width: 100%;
     height: 100vh;
-    background: url(./images/bg.png);
+    background: url(./images/bg2.png);
     background-size: cover;
     z-index: 1;
+    position:sticky;
 }    
 
 .header-container{
@@ -63,7 +70,7 @@ header{
 }
 
 .nav-title a{
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Caudex', serif;
     color: #ffffff;
     font-size: 25px;
     text-decoration: none;
@@ -95,11 +102,13 @@ nav ul{
 }
 
 nav ul li a{
-    margin: 1rem;
+    margin: 1.2vh;
     color:rgb(142, 142, 142);
-    font-family: 'Yeseva One', cursive;
-    font-size: 18px;
+    font-family: 'Caudex', serif;
+    font-size: 1rem;
     text-decoration: none;
+   
+
 }
 
 a:hover {
@@ -111,7 +120,7 @@ a:hover {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Caudex', serif;
     color:#ffffff ;
     font-size: 13vh;
     flex: 1;
@@ -130,26 +139,30 @@ a:hover {
     margin-top: 0px;
     width: 100%;
     box-shadow: 0 -6px 8px -4px rgba(0, 0, 0, 0.3), 0 -6px 20px -4px rgba(0, 0, 0, 0.2);
-    height: 100vh;
-    z-index: 10;
-    animation: bg-color 15s infinite ease both;
+    /*height: 100vh;*/
+    
+    animation: bg-color 12s infinite ease both;
+    
+    
 }
 
 .me-tab{
     display: flex;
-    width: 70%;
-    height: 70%;
+    width: 90%;
+     height: 90%; 
     min-height: 200px;
     margin: auto;
-    animation: lighting 4s infinite ease both;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: tab-color 10s infinite ease both;
     background-color: white;
     border-radius: 10px;
+    padding-top:60px;
 }
 
 .me-image{
     width: 100%;
     height: 100%;
-    border: 2px solid rgb(8, 39, 218);
     border-radius: 10px;
 }
 
@@ -170,69 +183,103 @@ a:hover {
 }
 
 .me-title{
+    
     display: flex;
-    height: 10%;
-    font-family: 'Yeseva One', cursive;
+    font-weight: 1000;
+    height: 12%;
+    font-family: 'Caudex', serif;
     font-size: 7vh;
-    animation: textLighting 6s 0.5s infinite ease both ;
+    animation: lighting 12s infinite ease both ;
 }
 
 .me-text p{
     display: block;
+    margin-top: 10%;
     line-height: 1.5em;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Caudex', serif;
     font-size: 1.2em;
-    color: rgb(44, 168, 206);
+    color: #fff;
 }
 
 footer{
-    min-height: 500px;
+    min-height: 45vh;
     width: 100%;
-    
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     justify-content: center;
 }
 
 .footer-title{
     padding-top: 40px;
-    padding-left: 40px;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Caudex', serif;
     font-size: 7vh;
     color:#ffffff
 }
 
 .footer-text{
-    
     padding-left: 40px;
     padding-right: 40px;
     line-height: 1.5em;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Caudex', serif;
     font-size: 1.2em;
     color: white;
     font-weight:lighter;
-
 }
 
-.social-media > div{
-    margin-top: 5%;
-    font-family: 'Yeseva One', cursive;
-    font-size: 1.2em;
-    color: white;
-
-} 
-.insta a, .fb a, .gh a, .linkedin a{
-    text-decoration: none;
-    color: white;
-}
-
-.insta a:hover, .fb a:hover, .gh a:hover, .linkedin a:hover{
-   color:grey;
-
-}
-
-.social-media  {
-    display:flex;
+.social-media{
+    width: 60%;
+    height: 10vh;
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5%;
 }
+
+.social-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.social-link svg path {
+    fill: white;
+}
+
+.social-link:hover {
+    background-color: #fff;
+}
+
+.social-link:hover svg path {
+    fill: black;
+}
+
+@media screen and (max-width: 680px) {
+
+    .me-tab{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .me-image-box{
+        width: 100%;
+    }
+
+    .me-image-container{
+        height:50%;
+        width:50%;
+        display:block;
+        margin:auto;
+    }
+
+    
+}
+
